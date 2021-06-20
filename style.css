@@ -1,0 +1,1095 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body, html {
+  line-height: 1;
+  overflow-x: hidden;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body.active {
+  background-color: #000;
+}
+
+body.active h1, body.active h2, body.active h3, body.active h4, body.active p {
+  color: #fff;
+}
+
+body.active input, body.active textarea {
+  background-color: #000;
+}
+
+body.active .hero-img img.logo {
+  width: 100%;
+  position: relative;
+  display: none;
+}
+
+body.active .hero-img img.logo-white {
+  position: absolute;
+  display: block;
+  width: 85%;
+  left: 75px;
+  bottom: -345px;
+}
+
+body.active .hero a.icons {
+  color: #fff;
+}
+
+body.active .btn-primary {
+  background-color: #fff;
+  color: #000;
+}
+
+body.active .btn-primary:hover {
+  background-color: #080808;
+  color: white;
+  border: 1px solid #fff;
+}
+
+body.active .text a.scroll-bt {
+  color: #fff;
+}
+
+body.active .text a.scroll-bt .fa-angle-double-down {
+  color: #fff;
+}
+
+body.active .email a {
+  color: #fff !important;
+}
+
+body.active footer form p.btn-message a.submit {
+  background-color: #fff;
+  color: #000;
+}
+
+body.active footer form p.btn-message a.submit:hover {
+  color: #fff;
+  background-color: #050505;
+  border: 2px solid white;
+  text-decoration: none;
+}
+
+body.active .slick-dots {
+  bottom: 0 !important;
+}
+
+body.active .slick-dots li button:before {
+  color: white;
+}
+
+body.active .slick-active button:before {
+  color: #fff;
+}
+
+body.active .pro-link {
+  color: #fff;
+}
+
+body.active .progress::after {
+  border: 12px solid #000;
+}
+
+body.active .progress.blue .progress-bar {
+  border-color: #fff;
+}
+
+body.active .progress.yellow .progress-bar {
+  border-color: #fff;
+}
+
+body.active .progress.pink .progress-bar {
+  border-color: #fff;
+}
+
+body.active .progress.green .progress-bar {
+  border-color: #fff;
+}
+
+body.active .progress .progress-value {
+  background: #000000;
+  font-size: 24px;
+  color: white;
+}
+
+.hero {
+  margin: 0 100px 120px 100px;
+}
+
+.hero .text {
+  padding-left: 10px;
+  margin-top: 350px;
+}
+
+.hero .text h4 {
+  font-family: "Avenir-demi";
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+
+.hero .text h1 {
+  font-family: "Avenir-bold";
+  font-size: 55px;
+  padding: 10px 0;
+}
+
+.hero .text p {
+  font-size: 22px;
+  font-family: "Avenir-demi";
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+.hero .text a.icons {
+  color: #000;
+  font-size: 20px;
+  margin: 0px 5px;
+}
+
+.hero .text a.icons i {
+  font-size: 20px;
+}
+
+.hero .text a.icons i span {
+  font-size: 14px;
+  font-family: "Avenir-regular";
+}
+
+.hero .text a.scroll-bt {
+  font-size: 18px;
+  font-family: "Avenir-regular";
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 120px;
+  position: relative;
+  top: 100px;
+  text-decoration: none;
+}
+
+.hero .text a.scroll-bt img {
+  padding: 0 8px;
+}
+
+.hero .hero-img img.logo {
+  width: 88%;
+  position: relative;
+  display: block;
+  top: 70px;
+  left: 60px;
+}
+
+.hero .hero-img img.logo-white {
+  position: absolute;
+  display: none;
+}
+
+.hero .hero-img #toggle {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 30px;
+  border-radius: 160px;
+  background-color: rgba(90, 88, 88, 0.267);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  left: 560px;
+  bottom: -115px;
+}
+
+.hero .hero-img #toggle .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-box-shadow: 0 8px 40px rgba 0, 0, 0, 0.5, inset 0 4px 4px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 8px 40px rgba 0, 0, 0, 0.5, inset 0 4px 4px rgba(255, 255, 255, 0.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.hero .hero-img #toggle .light {
+  position: relative;
+  right: 50px;
+  font-family: "Avenir-demi";
+}
+
+.hero .hero-img #toggle .dark {
+  position: relative;
+  left: 40px;
+  font-family: "Avenir-demi";
+}
+
+.hero .hero-img #toggle.active .indicator {
+  left: 30px;
+  background-color: rgba(17, 17, 17, 0.836);
+}
+
+.hero .hero-img #toggle.active {
+  background: #3f3f3f;
+  -webkit-box-shadow: inset 0 2px 60px rgba 0, 0, 0, 0.1, inset 0 2px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 2px 60px rgba 0, 0, 0, 0.1, inset 0 2px 0px rgba(0, 0, 0, 0.1);
+  top: 430px;
+}
+
+.about {
+  margin: 300px 100px 0 100px;
+}
+
+.about h2 {
+  font-family: "Avenir-bold";
+  padding: 0 0 45px 0;
+  font-size: 55px;
+}
+
+.about p.abt-me {
+  font-family: "Avenir-regular";
+  font-size: 20px;
+  padding-right: 50px;
+  line-height: 35px;
+}
+
+.about h3 {
+  font-family: "Avenir-bold";
+  font-size: 28px;
+  padding: 10px 0;
+}
+
+.about .btn-primary {
+  background-color: #000;
+  border: 0;
+  padding: 10px 40px;
+  margin-top: 30px;
+  font-size: 18px;
+  font-family: "Avenir-demi";
+}
+
+.about .btn-primary:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.about .experience {
+  margin: 35px 0;
+}
+
+.about .experience h4 {
+  font-size: 16px;
+  font-family: "Avenir-demi";
+  padding: 0px 0;
+}
+
+.about .experience p {
+  font: 10px;
+  font-family: "Avenir-regular";
+  line-height: 25px;
+  margin: 10px 0;
+}
+
+.about .experience a {
+  color: #000;
+  font-family: "Avenir-regular";
+}
+
+.skills {
+  margin: 220px 100px 100px 100px;
+}
+
+.skills h2 {
+  font-family: "Avenir-bold";
+  padding: 5px 0;
+  font-size: 55px;
+}
+
+.skills p {
+  font-family: "Avenir-regular";
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.skills .progress {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  background: none;
+  margin: 0 auto;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: relative;
+  margin-top: 100px;
+}
+
+.skills .progress:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.skills .progress > span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.skills .progress .progress-left {
+  left: 0;
+}
+
+.skills .progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+
+.skills .progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+
+.skills .progress .progress-right {
+  right: 0;
+}
+
+.skills .progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  -webkit-animation: loading-1 1.8s linear forwards;
+          animation: loading-1 1.8s linear forwards;
+}
+
+.skills .progress .progress-value {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: #ffffff;
+  font-size: 16px;
+  font-family: "Avenir-regular";
+  color: black;
+  line-height: 135px;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.skills .progress.blue .progress-bar {
+  border-color: #000;
+}
+
+.skills .progress.blue .progress-left .progress-bar {
+  -webkit-animation: loading-2 1.5s linear forwards 1.8s;
+          animation: loading-2 1.5s linear forwards 1.8s;
+}
+
+.skills .progress.yellow .progress-bar {
+  border-color: #000;
+}
+
+.skills .progress.yellow .progress-left .progress-bar {
+  -webkit-animation: loading-3 1s linear forwards 1.8s;
+          animation: loading-3 1s linear forwards 1.8s;
+}
+
+.skills .progress.pink .progress-bar {
+  border-color: #000;
+}
+
+.skills .progress.pink .progress-left .progress-bar {
+  -webkit-animation: loading-4 0.4s linear forwards 1.8s;
+          animation: loading-4 0.4s linear forwards 1.8s;
+}
+
+.skills .progress.green .progress-bar {
+  border-color: #000;
+}
+
+.skills .progress.green .progress-left .progress-bar {
+  -webkit-animation: loading-5 1.2s linear forwards 1.8s;
+          animation: loading-5 1.2s linear forwards 1.8s;
+}
+
+@-webkit-keyframes loading-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes loading-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes loading-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(144deg);
+    transform: rotate(144deg);
+  }
+}
+
+@keyframes loading-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(144deg);
+    transform: rotate(144deg);
+  }
+}
+
+@-webkit-keyframes loading-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes loading-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+@-webkit-keyframes loading-4 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(36deg);
+    transform: rotate(36deg);
+  }
+}
+
+@keyframes loading-4 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(36deg);
+    transform: rotate(36deg);
+  }
+}
+
+@-webkit-keyframes loading-5 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(126deg);
+    transform: rotate(126deg);
+  }
+}
+
+@keyframes loading-5 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(126deg);
+    transform: rotate(126deg);
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .skills .progress {
+    margin-bottom: 20px;
+  }
+}
+
+.project {
+  padding: 120px 0px 0 120px;
+}
+
+.project h2 {
+  font-family: "Avenir-bold";
+  font-size: 55px;
+  padding-bottom: 60px;
+}
+
+.project h3 {
+  font-size: 34px;
+  font-family: "Avenir-bold";
+}
+
+.project p {
+  font-family: "Avenir-regular";
+  font-size: 22px;
+  margin: 20px 0 70px 0;
+  line-height: 28px;
+}
+
+.project a {
+  color: #000;
+  text-decoration: none;
+  font-family: "Avenir-light";
+  font-size: 22px;
+}
+
+.project a::after {
+  display: block;
+  content: '';
+  border: 2px solid;
+  width: 40%;
+  margin: 5px 0;
+}
+
+.project img {
+  width: 60%;
+}
+
+footer {
+  margin: 200px  0 50px 110px;
+}
+
+footer .cap {
+  font-family: "Avenir-regular";
+  font-size: 26px;
+  line-height: 40px;
+}
+
+footer h3 {
+  text-align: center;
+  padding: 20px  0 200px 0;
+  font-size: 26px;
+  font-family: "Avenir-medium-italic";
+}
+
+footer .pic {
+  width: 70%;
+  border-radius: 5px;
+  margin-left: 80px;
+}
+
+footer form {
+  margin-top: 0px;
+}
+
+footer form h4 {
+  font-family: "Avenir-bold";
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+footer form .contact-details p {
+  font-family: "Avenir-regular";
+  font-size: 16px;
+}
+
+footer form .contact-details p span {
+  font-family: "Avenir-bold";
+  display: block;
+  font-size: 20px;
+  padding: 15px 40px 0 0;
+}
+
+footer form .contact-details .email {
+  margin: 0px 0;
+}
+
+footer form .contact-details .email a {
+  display: block;
+  color: #000;
+  font-family: "Avenir-bold";
+  font-size: 20px;
+  padding: 18px 0;
+}
+
+footer form input {
+  border: 0;
+  border-bottom: 2px solid #d8d8d8;
+  margin: 10px 0;
+  width: 500px;
+}
+
+footer form input::-webkit-input-placeholder {
+  font-family: "Avenir-regular";
+  line-height: 70px;
+}
+
+footer form input:-ms-input-placeholder {
+  font-family: "Avenir-regular";
+  line-height: 70px;
+}
+
+footer form input::-ms-input-placeholder {
+  font-family: "Avenir-regular";
+  line-height: 70px;
+}
+
+footer form input::placeholder {
+  font-family: "Avenir-regular";
+  line-height: 70px;
+}
+
+footer form input[type="text"] {
+  padding: 20px 0;
+  font-family: "Avenir-regular";
+}
+
+footer form input[type="text"]:focus {
+  outline: 0;
+}
+
+footer form textarea[type="text"]:focus {
+  outline: 0;
+}
+
+footer form textarea {
+  border: 0;
+  border-bottom: 2px solid #d8d8d8;
+  margin: 30px 0;
+  width: 500px;
+}
+
+footer form textarea::-webkit-input-placeholder {
+  font-family: "Avenir-regular";
+}
+
+footer form textarea:-ms-input-placeholder {
+  font-family: "Avenir-regular";
+}
+
+footer form textarea::-ms-input-placeholder {
+  font-family: "Avenir-regular";
+}
+
+footer form textarea::placeholder {
+  font-family: "Avenir-regular";
+}
+
+footer form p.btn-message {
+  margin-top: 30px;
+}
+
+footer form p.btn-message a.submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 67%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #000;
+  text-decoration: none;
+  padding: 18px 0px;
+  color: #fff;
+  font-family: "Avenir-demi";
+}
+
+footer form p.btn-message a.submit:hover {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+  text-decoration: none;
+}
+
+@media (max-width: 575px) {
+  body.active .hero {
+    height: 100vh;
+  }
+  body.active .hero .hero-img img.logo-white {
+    left: 15px;
+    bottom: -148px;
+  }
+  body.active .hero .hero-img #toggle.active {
+    top: 200px;
+  }
+  .hero {
+    margin: 0px 8px;
+  }
+  .hero .text {
+    margin-top: 106px;
+  }
+  .hero .text h4 {
+    font-size: 18px;
+    padding-bottom: 16px;
+  }
+  .hero .text h1 {
+    font-size: 35px;
+  }
+  .hero .text a {
+    top: 225px;
+    font-size: 14px;
+  }
+  .hero .text p {
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
+  .hero .text a.scroll-bt {
+    top: 239px;
+    font-size: 16px;
+  }
+  .hero .hero-img img.logo {
+    top: -128px;
+    left: 0;
+  }
+  .hero .hero-img #toggle {
+    left: 228px;
+    bottom: 97px;
+  }
+  .about {
+    margin: 55px 20px 0 20px;
+    text-align: center;
+  }
+  .about p.abt-me {
+    font-size: 15px;
+    padding-right: 0px;
+    line-height: 28px;
+  }
+  .about h2 {
+    padding: 0 0 40px 0;
+    font-size: 35px;
+  }
+  .about h3 {
+    font-size: 25px;
+    padding: 40px 0 1px 0;
+  }
+  .skills {
+    margin: 0px 20px 90px 20px;
+    text-align: center;
+  }
+  .skills h2 {
+    padding: 45px 0;
+    font-size: 35px;
+  }
+  .skills p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .skills .progress .progress-value {
+    font-size: 12px !important;
+  }
+  .project {
+    padding: 0 10px 20px 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .project h2 {
+    font-size: 35px;
+    padding-bottom: 42px;
+  }
+  .project h3 {
+    font-size: 21px;
+  }
+  .project a {
+    font-size: 15px;
+  }
+  .project a::after {
+    width: 40%;
+    margin: 5px 104px;
+  }
+  .project p {
+    font-size: 14px;
+    margin: 20px 0;
+    line-height: 23px;
+  }
+  .project img {
+    width: 100%;
+    margin: 9px 0;
+  }
+  footer {
+    margin: 200px 0 50px 0px;
+  }
+  footer .cap {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  footer .pic {
+    width: 100%;
+    margin-left: 0px;
+  }
+  footer form h4 {
+    font-size: 24px;
+    margin: 40px 0;
+    text-align: center;
+  }
+  footer form .contact-details p {
+    font-family: "Avenir-regular";
+    font-size: 12px;
+  }
+  footer form .contact-details .email a {
+    font-size: 14px;
+    padding: 12px 0;
+  }
+  footer form .contact-details p span {
+    font-size: 14px;
+    padding: 11px 40px 0 0;
+  }
+  footer form input, footer form textarea {
+    width: 342px;
+  }
+  footer form p.btn-message a.submit {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body.active .hero .hero-img img.logo-white {
+    bottom: -181px;
+  }
+  body.active .hero .hero-img #toggle.active {
+    top: 250px;
+  }
+  .hero {
+    margin: 0px 25px;
+  }
+  .hero .text {
+    padding-left: 0px;
+    margin-top: 180px;
+  }
+  .hero .text h4 {
+    font-size: 18px;
+  }
+  .hero .text h1 {
+    font-size: 32px;
+  }
+  .hero .text p {
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+  .hero .text a {
+    top: 12px;
+  }
+  .hero .text a.scroll-bt {
+    top: 20px;
+    font-size: 16px;
+  }
+  .hero .hero-img img.logo {
+    width: 80%;
+    top: 14px;
+    left: 87px;
+  }
+  .hero .hero-img #toggle {
+    left: 270px;
+    bottom: -80px;
+  }
+  .about {
+    margin: 180px 30px 0 30px;
+  }
+  .skills {
+    margin: 70px 40px;
+  }
+  .skills .progress .progress-value {
+    font-size: 14px !important;
+  }
+  .project {
+    padding: 0 0px 0 30px;
+  }
+  .project h2 {
+    font-size: 32px;
+    padding-bottom: 40px;
+  }
+  .project h3 {
+    font-size: 20px;
+  }
+  .project p {
+    font-size: 16px;
+    margin: 20px 0 38px 0;
+    line-height: 25px;
+  }
+  .project a {
+    font-size: 16px;
+  }
+  .project a:after {
+    width: 51%;
+  }
+  footer {
+    margin: 170px 20px 50px 30px;
+  }
+  footer .pic {
+    width: 100%;
+    margin-left: 0;
+  }
+  footer form h4 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  footer form .contact-details p span {
+    font-size: 14px;
+  }
+  footer form .contact-details p.email a {
+    font-size: 14px;
+    padding: 13px 0;
+  }
+  footer form input, footer form textarea {
+    margin: 8px 0;
+    width: 380px;
+  }
+  footer form input[type="text"] {
+    padding: 11px 0;
+  }
+  footer form p.btn-message {
+    margin-top: 18px;
+  }
+  footer form p.btn-message a.submit {
+    width: 97%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  body.active .hero-img img.logo-white {
+    bottom: -258px;
+  }
+  body.active .hero-img #toggle.active {
+    top: 357px;
+  }
+  .hero {
+    margin: 0px 30px;
+  }
+  .hero .text h1 {
+    font-size: 42px;
+  }
+  .hero .text p {
+    font-size: 20px;
+    letter-spacing: 4px;
+  }
+  .hero .text a {
+    top: 40px;
+  }
+  .hero .text a.scroll-bt {
+    top: 40px;
+    font-size: 16px;
+  }
+  .hero .hero-img #toggle {
+    left: 390px;
+  }
+  .about {
+    margin: 230px 46px 0 46px;
+  }
+  .skills {
+    margin: 80px 46px;
+  }
+  .project {
+    padding: 0px 0px 0 46px;
+  }
+  .project p {
+    margin: 20px 0 27px 0;
+  }
+  .project a::after {
+    width: 52%;
+  }
+  footer {
+    margin: 150px 0 50px 26px;
+  }
+  footer .pic {
+    width: 96%;
+    margin-left: 0px;
+  }
+  footer form p.btn-message a.submit {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

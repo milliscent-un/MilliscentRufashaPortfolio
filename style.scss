@@ -1,0 +1,399 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body,html{
+	line-height: 1;overflow-x: hidden;transition:0.7s;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// font 
+$regular:'Avenir-regular';
+$bold:'Avenir-bold';
+$demibold:'Avenir-demi';
+$light:'Avenir-light';
+$medium-italic:'Avenir-medium-italic';
+$italic:'Avenir-italic';
+
+
+// @mixin flex { display: flex; align-items: center; justify-content: center;}
+body.active{ background-color: #000;
+	h1,h2,h3,h4,p{color: #fff;}
+	input, textarea{background-color: #000;}
+	.hero-img img.logo{width: 100%; position: relative; display: none;}
+	.hero-img img.logo-white{position: absolute;display: block;width: 85%; left: 75px; bottom:-345px;}
+	 .hero a.icons{color: #fff;}
+	.btn-primary{background-color: #fff; color:#000;&:hover{background-color: rgb(8, 8, 8);color: rgb(255, 255, 255);border:1px solid #fff;} }
+	.text a.scroll-bt{color: #fff; .fa-angle-double-down {color: #fff;;}}
+	.email a{color: #fff!important;}
+	footer form p.btn-message a.submit{background-color: #fff; color: #000;  &:hover{color: #fff; background-color: rgb(5, 5, 5); border: 2px solid rgb(255, 255, 255); text-decoration: none;}}
+	.slick-dots{bottom: 0!important;}
+	.slick-dots li button:before {color:white;}
+	.slick-active button:before{color:#fff;} 
+	.pro-link{color: #fff;}
+	.progress::after {border: 12px solid #000;}
+	.progress.blue .progress-bar{border-color: #fff;}
+	.progress.yellow .progress-bar{border-color: #fff;}
+	.progress.pink .progress-bar{border-color: #fff;}
+	.progress.green .progress-bar{border-color: #fff;}
+	.progress .progress-value{background: #000000;font-size: 24px;color: rgb(255, 255, 255);}
+	
+}
+
+//  hero 
+.hero{ margin: 0 100px 120px 100px;
+	.text{ padding-left: 10px; margin-top: 350px;
+		h4{font-family: $demibold; font-size: 20px; padding-bottom:30px;}
+		h1{font-family: $bold; font-size: 55px; padding: 10px 0;}
+		p{font-size: 22px; font-family: $demibold; letter-spacing: 8px; margin-bottom: 20px;}
+		a.icons{color: #000; font-size: 20px; margin: 0px 5px;; i{font-size:20px; span{font-size: 14px; font-family: $regular;}}}
+		a.scroll-bt{font-size: 18px;font-family: $regular; color: black; display: flex; align-items: flex-start; margin-top:120px; position: relative; top: 100px; text-decoration: none;
+			img{padding: 0 8px;}
+		}
+	}
+	.hero-img{
+		img.logo{width: 88%; position: relative; display: block; top:70px; left: 60px;}
+		img.logo-white{position: absolute; display: none;  }
+		// p{display: flex; align-items: center; justify-content: flex-end; font-family: $regular; position: relative; bottom: 20px;
+		// 	img{padding: 0 10px;}
+		// }
+		#toggle{position: relative; display: block; width: 60px; height: 30px; border-radius: 160px; background-color: rgba(90, 88, 88, 0.267); transition: 0.5s; cursor: pointer; left: 560px; bottom: -115px;
+			.indicator{position: absolute; top: 0; left: 0; width: 30px; height: 30px; background-color: #fff; 
+					   border-radius:50%; transform: scale(0.9); box-shadow: 0 8px 40px rgba (0,0,0,0.5) , inset 0 4px 4px rgba(255,255,255, 0.2); transition: 0.5s;}	
+				.light{position: relative; right: 50px;font-family: $demibold;}
+				.dark{position: relative; left: 40px; font-family: $demibold;}	
+		}
+		#toggle.active .indicator{left: 30px; background-color: rgba(17, 17, 17, 0.836);}
+		#toggle.active{ background:rgb(63, 63, 63);  box-shadow: inset 0 2px 60px rgba (0,0,0,0.1) , inset 0 2px 0px rgba(0,0,0,0.1); top: 430px;}
+	}
+}
+
+// about
+.about{margin: 300px 100px 0 100px;
+	h2{font-family: $bold; padding: 0 0 45px 0; font-size: 55px;}
+	p.abt-me{font-family: $regular;font-size: 20px; padding-right: 50px; line-height: 35px;}
+	h3{font-family: $bold; font-size: 28px;padding: 10px 0;}
+	.btn-primary{background-color: #000; border:0; padding: 10px 40px; margin-top: 30px;font-size: 18px;font-family:$demibold; &:hover{background-color: #fff;color: #000;border:1px solid#000;}}
+	.experience{margin: 35px 0;
+		h4{font-size: 16px; font-family: $demibold; padding: 0px 0;}
+		p{font: 10px;font-family: $regular; line-height: 25px;margin: 10px 0;}
+		a{color: #000; font-family: $regular;}
+	}
+}
+
+
+// about
+// Skills
+.skills{margin: 220px 100px 100px 100px;
+	h2{font-family: $bold; padding: 5px 0; font-size: 55px;}
+	p{font-family: $regular;font-size: 20px;  line-height: 35px; }
+	.progress{width: 150px;height: 150px;line-height: 150px;background: none;margin: 0 auto;box-shadow: none;position: relative; margin-top: 100px;}
+	.progress:after{content: "";width: 100%;height: 100%;border-radius: 50%;border: 12px solid #fff;position: absolute;top: 0;left: 0;}
+	.progress > span{width: 50%;height: 100%;overflow: hidden;position: absolute;top: 0;z-index: 1;}
+	.progress .progress-left{left: 0;}
+	.progress .progress-bar{width: 100%;height: 100%;background: none;border-width: 12px;border-style: solid;position: absolute;top: 0;}
+	.progress .progress-left .progress-bar{left: 100%;border-top-right-radius: 80px;border-bottom-right-radius: 80px;border-left: 0;-webkit-transform-origin: center left;transform-origin: center left;}
+	.progress .progress-right{right: 0;}
+	.progress .progress-right .progress-bar{left: -100%;border-top-left-radius: 80px;border-bottom-left-radius: 80px;border-right: 0;-webkit-transform-origin: center right;transform-origin: center right;animation: loading-1 1.8s linear forwards;}
+	.progress .progress-value{width: 90%;height: 90%;border-radius: 50%;background: #ffffff;font-size: 16px;font-family: $regular; color: rgb(0, 0, 0);line-height: 135px;text-align: center;position: absolute;top: 5%;left: 5%;}
+	.progress.blue .progress-bar{border-color: #000;}
+	.progress.blue .progress-left .progress-bar{animation: loading-2 1.5s linear forwards 1.8s;}
+	.progress.yellow .progress-bar{border-color: #000;}
+	.progress.yellow .progress-left .progress-bar{animation: loading-3 1s linear forwards 1.8s;}
+	.progress.pink .progress-bar{border-color: #000;}
+	.progress.pink .progress-left .progress-bar{animation: loading-4 0.4s linear forwards 1.8s;}
+	.progress.green .progress-bar{border-color: #000;}
+	.progress.green .progress-left .progress-bar{animation: loading-5 1.2s linear forwards 1.8s;}
+	@keyframes loading-1{
+		0%{
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100%{
+			-webkit-transform: rotate(180deg);
+			transform: rotate(180deg);
+		}
+	}
+	@keyframes loading-2{
+		0%{
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100%{
+			-webkit-transform: rotate(144deg);
+			transform: rotate(144deg);
+		}
+	}
+	@keyframes loading-3{
+		0%{
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100%{
+			-webkit-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+	}
+	@keyframes loading-4{
+		0%{
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100%{
+			-webkit-transform: rotate(36deg);
+			transform: rotate(36deg);
+		}
+	}
+	@keyframes loading-5{
+		0%{
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100%{
+			-webkit-transform: rotate(126deg);
+			transform: rotate(126deg);
+		}
+	}
+	@media only screen and (max-width: 990px){
+		.progress{ margin-bottom: 20px; }
+	}
+	
+
+}
+
+
+
+// Skills
+// project
+.project{ padding: 120px 0px 0 120px ;
+	h2{font-family: $bold; font-size: 55px; padding-bottom: 60px;}
+	h3{font-size: 34px;font-family: $bold; }
+	p{font-family: $regular;font-size:22px; margin: 20px 0 70px 0; line-height: 28px;}
+	a{color: #000; text-decoration:none; font-family: $light;font-size:22px; &::after{display: block; content: ''; border: 2px solid; width: 40%; margin: 5px 0;}}
+	img{width: 60%;}
+}
+// project
+
+// footer
+ footer{ margin: 200px  0 50px 110px;
+	 .cap{font-family: $regular;font-size:26px; line-height: 40px;}
+	 h3{text-align: center; padding: 20px  0 200px 0; font-size: 26px; font-family: $medium-italic;}
+	 .pic{width: 70%; border-radius: 5px; margin-left: 80px;}
+	 form{ margin-top: 0px; 
+		 h4{font-family: $bold; font-size: 38px;margin-bottom: 40px;}
+		 .contact-details{ 
+			p{font-family: $regular;font-size:16px;  span{font-family: $bold; display: block; font-size: 20px; padding: 15px 40px 0 0;}}
+			.email{margin: 0px 0;  a{display: block; color: #000; font-family: $bold;font-size: 20px;  padding: 18px 0;}}
+		}
+		 input{border: 0; border-bottom: 2px solid #d8d8d8; margin: 10px 0; width: 500px; &::placeholder{font-family: $regular; line-height: 70px;}}
+		 input[type="text"]{padding: 20px 0; font-family: $regular;}
+		 input[type="text"]:focus{outline: 0;}
+		 textarea[type="text"]:focus{outline: 0;}
+		 textarea{border: 0; border-bottom: 2px solid #d8d8d8; margin: 30px 0; width: 500px; &::placeholder{font-family: $regular;}}
+		 p.btn-message{margin-top: 30px; a.submit{display: flex; width: 67%; justify-content: center; background-color: #000; text-decoration: none; padding: 18px 0px; color: #fff; font-family: $demibold; &:hover{color: #000; background-color: #fff; border: 2px solid #000; text-decoration: none;}}}
+	 }
+ }
+
+
+
+
+////////// MEDIA QUERIES///////////////////////////////////////////
+
+// Extra small devices (portrait phones, less than 576px)
+ @media (max-width: 575px) {
+	body.active{
+	   .hero{height: 100vh;	
+		 .hero-img{
+			  img.logo-white {left: 15px;bottom: -148px;}
+			  #toggle.active {top: 200px;}
+		 } 
+	   }
+	} 
+	// hero
+	.hero{margin: 0px 8px; 
+		.text {margin-top: 106px;
+			h4 {font-size: 18px;padding-bottom: 16px;}
+			h1{font-size: 35px;}
+			a{top: 225px;font-size: 14px;}
+			p {font-size: 15px;letter-spacing: 3px;}
+			a.scroll-bt{top: 239px;font-size: 16px;}
+		}
+		.hero-img{
+			img.logo {top: -128px; left: 0;}
+			#toggle{left: 228px;bottom: 97px;}
+		}	
+	}
+	// about
+	.about {margin: 55px 20px 0 20px; text-align: center;
+		p.abt-me{font-size: 15px;padding-right: 0px;line-height: 28px;}
+		h2 {padding: 0 0 40px 0;font-size: 35px;}
+		h3 {font-size: 25px;padding: 40px 0 1px 0;}
+	}
+
+	.skills { margin: 0px 20px 90px 20px;text-align: center;
+		h2 {padding: 45px 0;font-size: 35px;}
+		p {font-size: 15px;line-height: 26px;}	
+		.progress .progress-value{font-size: 12px!important;}
+	}
+	.project {padding: 0 10px 20px 10px;flex-direction: column; text-align: center;
+		h2{font-size: 35px;padding-bottom: 42px;}
+		h3 {font-size: 21px;}
+		a {font-size: 15px; &::after {width: 40%;margin: 5px 104px;}}
+		p {font-size: 14px;margin: 20px 0;line-height: 23px;}
+		img {width: 100%;margin: 9px 0;}
+	
+
+	}
+			
+	footer {margin: 200px 0 50px 0px;
+		.cap {font-size: 18px;line-height: 28px;}		
+		.pic {width: 100%;margin-left: 0px;}
+		form {
+			h4 {font-size: 24px;margin: 40px 0;text-align: center;}
+			.contact-details{
+				p {font-family: "Avenir-regular";font-size: 12px;} 
+				.email a {font-size: 14px;padding: 12px 0;}
+				p span {font-size: 14px;padding: 11px 40px 0 0;}
+			}
+			input, textarea{width: 342px;}
+			p.btn-message a.submit{width:100%}
+		}
+	}
+ }
+
+// Small devices (landscape phones, 576px and up 767)
+  @media (min-width: 568px) and (max-width: 767px) {}
+
+// Medium devices (tablets, 768px and up)
+ @media (min-width: 768px) and (max-width: 991px) {
+	body.active{
+		.hero{
+		  .hero-img {
+			 img.logo-white {bottom: -181px;}
+			 #toggle.active {top: 250px;}
+		    }
+		}
+	}
+	.hero {margin: 0px 25px;
+		.text {padding-left: 0px;margin-top: 180px;
+			h4 {font-size: 18px;}
+			h1 {font-size: 32px;}
+			p {font-size: 17px;letter-spacing: 2px;}
+			a{top: 12px;}
+			a.scroll-bt{top: 20px;font-size: 16px;}
+		}
+		.hero-img {
+			img.logo {width: 80%;top: 14px;left: 87px;}
+			#toggle{left: 270px;bottom: -80px;}
+		}
+	}
+	.about {
+		margin: 180px 30px 0 30px;
+	}
+	.skills {
+		margin: 70px 40px;
+		.progress .progress-value{font-size: 14px!important;}
+	}
+	.project {padding: 0 0px 0 30px;
+		h2{font-size:32px;padding-bottom: 40px;}
+		h3 {font-size: 20px;}
+		p {font-size: 16px;margin: 20px 0 38px 0;line-height: 25px;}
+		a {font-size: 16px; &:after {width: 51%;}}
+	}
+	footer {margin: 170px 20px 50px 30px;
+		.pic {width: 100%;margin-left: 0;}
+		form{ 
+			h4 {font-size: 30px;margin-bottom: 30px;}
+			.contact-details{ 
+				p span {font-size: 14px;}
+				p.email a {font-size: 14px;padding: 13px 0;}
+			}
+			input, textarea{margin: 8px 0;width: 380px;}
+			input[type="text"] {padding: 11px 0;}
+			p.btn-message {margin-top: 18px;  
+				a.submit {width: 97%;}
+			}
+		}
+	}
+ }
+
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+	body.active{
+		.hero-img{
+			img.logo-white {bottom: -258px;} 
+			#toggle.active {top: 357px;}
+		}
+	} 
+	.hero {margin: 0px 30px;
+		.text{
+			 h1 {font-size: 42px;}
+			 p {font-size: 20px;letter-spacing: 4px;}
+			 a{top: 40px;}
+			 a.scroll-bt{top: 40px;font-size: 16px;}
+		}
+		.hero-img{
+			#toggle{left: 390px;}
+		}
+	}
+	.about {
+		margin: 230px 46px 0 46px;
+	}
+	.skills {
+		margin: 80px 46px;
+	}
+	.project {padding: 0px 0px 0 46px;
+		p{ margin: 20px 0 27px 0;}
+		a::after {width: 52%;}
+	}
+	footer {margin: 150px 0 50px 26px;
+		.pic {
+			width: 96%;margin-left: 0px;
+		}
+		form p.btn-message a.submit {
+			width: 90%;
+		}
+	}
+}
