@@ -241,6 +241,8 @@ body.active{ background-color: #000;
 ////////// MEDIA QUERIES///////////////////////////////////////////
 
 // Extra small devices (portrait phones, less than 576px)
+
+
  @media (max-width: 575px) {
 	body.active{
 	   .hero{height: 100vh;	
@@ -264,6 +266,15 @@ body.active{ background-color: #000;
 			#toggle{left: 228px;bottom: 97px;}
 		}	
 	}
+	@media (min-width: 414px) and (max-width:414px){
+		.hero {
+			.text a.scroll-bt { top: 283px!important;}
+			 .hero-img #toggle {
+				left: 258px;
+				bottom: 84px;
+			}
+		}
+	 }
 	// about
 	.about {margin: 55px 20px 0 20px; text-align: center;
 		p.abt-me{font-size: 15px;padding-right: 0px;line-height: 28px;}

@@ -837,6 +837,19 @@ footer form p.btn-message a.submit:hover {
     left: 228px;
     bottom: 97px;
   }
+}
+
+@media (max-width: 575px) and (min-width: 414px) and (max-width: 414px) {
+  .hero .text a.scroll-bt {
+    top: 283px !important;
+  }
+  .hero .hero-img #toggle {
+    left: 258px;
+    bottom: 84px;
+  }
+}
+
+@media (max-width: 575px) {
   .about {
     margin: 55px 20px 0 20px;
     text-align: center;
